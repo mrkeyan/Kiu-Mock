@@ -1,3 +1,7 @@
+<!--
+Author Keyan Kwan
+Date: June 21 2015
+-->
 <!doctype html>
 <html>
     <head>
@@ -10,7 +14,7 @@
     </head>
     <body>
         <header>
-            <div class="header-content">
+            <div id="home" class="header-content">
                 <div class="header-nav-mobile">       
                     <div id="header-nav-toggle" class="header-nav-mobile-icon">
                         <div id="nav-toggle"><span></span></div>
@@ -27,7 +31,7 @@
                     </div>
                     <div class="header-logo-link nav-home" href="/"><img class="header-logo" src="images/logo_light.png" alt="kiu logo"/></div>
                 </div>
-                <nav class="header-nav">
+                <nav id="navBar" class="header-nav">
                     <a class="nav-button nav-home" href="#home">home</a>
                     <a class="nav-button nav-restaurant" href="#restaurant">restaurant</a>
                     <a class="nav-button nav-menu" href="#menu">menu</a>
@@ -362,72 +366,35 @@
                         </div>
                     </div>
                 </div>
-                <div id="reservations" class="reservations">
+            </div>
+            <div id="reservations" class="reservations">
+                <div class="reservation-wrapper">
+                    <h1>Reservations Coming Soon!</h1>
                 </div>
-                <div id="social" class="social">
+            </div>
+            <div id="social" class="social">
+                <div class="social-wrapper">
+                    <a href="http://www.facebook.com/kiumarkham" target="_blank"><img src="images/facebook.svg" alt="social media facebook icon"/></a>
+                    <a href="" target="_blank"><img src="images/twitter.svg" alt="social media twitter icon"/></a>
+                    <a href="" target="_blank"><img src="images/instagram.svg" alt="social media instagram icon"/></a>
                 </div>
             </div>
         </div>
-
-
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <div id="scroll-top" class="back-to-top">Back To Top</div>
+                <div class="footer-info">
+                    <p>Unit L 201, 169 Enterprise Blvd.</p>
+                    <p>Markham, ON L6G 1B3</p>
+                    <p>(123) 456-7890</p>
+                    <p>email@placeholder</p>
+                </div>
+            </div>
+        </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.8/js/swiper.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/ScrollToPlugin.min.js"></script>
-        <script>        
-            var mySwiper = new Swiper ('.swiper-container', {
-                pagination: '.swiper-pagination',
-                // Navigation arrows
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                paginationClickable: true,
-                spaceBetween: 0,
-                centeredSlides: true,
-                autoplay: 5500,
-                autoplayDisableOnInteraction:false,
-                loop: true
-            });
-
-            function nav(){  
-
-                var wrapper = $(".site"),
-                    $menu = $(".header-nav");
-
-                $menu.on("click","a", function(){
-                    var $this = $(this),
-                        href = $this.attr("href"),
-                        topY = $(href).offset().top;
-
-                    TweenLite.to($(window), 1, {scrollTo:{y: topY, autoKill: true}, ease:Power3.easeOut});
-
-                    return false;
-                });  
-
-            };
-
-            /*Mobile function*/
-            
-            var navMenuIcon = document.getElementById( "nav-toggle" );
-            var navMenu = document.getElementById( "mobile-menu-container" );
-            var navBar = document.getElementById( "mobile-navBar" );
-            document.getElementById( "header-nav-toggle" ).addEventListener( "click", function() {
-                navMenuIcon.classList.toggle( "active" );
-                if(navMenuIcon.classList.contains("active")){
-                   navMenu.style.display ="flex";
-                }else{
-                   navMenu.style.display = "none";  
-                }
-
-            });
-            
-            navBar.addEventListener("click", function(){
-                navMenuIcon.classList.toggle( "active" );
-                if(navMenuIcon.classList.contains("active")){
-                   navMenu.style.display ="flex";
-                }else{
-                   navMenu.style.display = "none";  
-                }
-            });
-            
-        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.8/TweenLite.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.8/plugins/ScrollToPlugin.min.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

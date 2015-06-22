@@ -1,3 +1,8 @@
+/*
+Author: Keyan Kwan
+Date: June 21 2015
+*/
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px), screen and (min-width :320px) and (max-width: 999px) {
     body {
         margin:0px;
@@ -46,9 +51,10 @@
         flex-direction: column;
         align-items: center;
     }
-    .nav-button {
-        letter-spacing: 2px;
+    .mobile-nav-button:hover{
+        color: rgba(255,138,56,1);   
     }
+
 
     .header-nav-mobile-menu a{
         color: rgba(255,255,255,0.9);
@@ -220,7 +226,55 @@
     .drinks-item-desc {
         width:90%;  
     }
+
+    .reservations{
+        display: flex;
+        width:100%;
+        padding:4em 0;
+        justify-content: center;
+    }
+
+    .social{
+        display: flex;
+        width:100%;
+        justify-content: center;
+    }
+
+    .social-wrapper{
+        width:100%;
+        height:10em;
+        background: rgba(10,10,10,0.8);
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-wrapper a{
+        width: 15%;
+        padding: 1em;
+    }
+
+    .footer{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(10,10,10,0.9);
+    }
+    .footer-wrapper{
+        width:100%;
+        padding: 2em 0;
+        color:white;
+    }
+    .back-to-top{
+        padding:1em;
+    }
+
 }
+
+/******************/
+/* larger screens */
+/******************/
 @media only screen and (min-width: 1000px){
     body {
         margin:0;
@@ -271,6 +325,10 @@
     .nav-button {
         padding: 10px 14px;
         letter-spacing: 2px;
+    }
+
+    .nav-button:hover{
+        color: rgba(255,138,56,1);   
     }
 
     .header-nav a{
@@ -426,10 +484,11 @@
         background-repeat: no-repeat;
         background-size:cover;
         width:100%;
-        height: 1000px;
-        overflow: hidden;
+        height: 900px;
+        //overflow: hidden;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 1em;
     }
 
 
@@ -476,9 +535,49 @@
 
 
     /*reservation*/
-
+    .reservations{
+        display: flex;
+        width:100%;
+        padding:4em 0;
+        justify-content: center;
+    }
 
 
 
     /*social*/
+    .social{
+        display: flex;
+        width:100%;
+        justify-content: center;
+    }
+
+    .social-wrapper{
+        width:100%;
+        height:10em;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-wrapper a{
+        width:4em;
+        padding: 1em;
+    }
+
+    .footer{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(10,10,10,0.9);
+    }
+    .footer-wrapper{
+        width:100%;
+        padding: 2em 0;
+        color:white;
+    }
+    .back-to-top{
+        padding:1em;
+    }
+
 }
