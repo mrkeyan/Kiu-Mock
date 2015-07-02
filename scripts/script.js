@@ -29,7 +29,6 @@ $(function(){
             topY = $(href).position().top;
         TweenLite.to(window, 1, {scrollTo:{y: topY, autoKill: true}});
 
-
     });  
 });
 
